@@ -1,0 +1,11 @@
+package %package%;
+
+import %InputClassFQN%;
+import %OutputClassFQN%;
+
+public class %TaskClass% {
+    %OutputClass% out;
+    public void solve(int testNumber, %InputClass% in, %OutputClass% out) {
+        this.out = out;
+    }
+}
