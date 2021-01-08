@@ -1,0 +1,58 @@
+{
+  "name" : "T1",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "CUSTOM",
+    "fileName" : "allvectors.in"
+  },
+  "output" : {
+    "type" : "CUSTOM",
+    "fileName" : "allvectors.out"
+  },
+  "tests" : [ {
+    "input" : "3",
+    "output" : "000\n001\n010\n011\n100\n101\n110\n111",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "1",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "2",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "4",
+    "index" : 3,
+    "active" : true
+  }, {
+    "input" : "5",
+    "index" : 4,
+    "active" : true
+  }, {
+    "input" : "6",
+    "index" : 5,
+    "active" : true
+  }, {
+    "input" : "7",
+    "index" : 6,
+    "active" : true
+  } ],
+  "location" : "src/main",
+  "vmArgs" : "-Xmx256m -Xss64m",
+  "mainClass" : "Main",
+  "taskClass" : "main.T1",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.11.30",
+  "contestName" : "Лабораторная работа по комбинаторике",
+  "truncate" : true,
+  "inputClass" : "main.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}

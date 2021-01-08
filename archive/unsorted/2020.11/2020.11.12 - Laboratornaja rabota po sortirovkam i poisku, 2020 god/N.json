@@ -1,0 +1,109 @@
+{
+  "name" : "N",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD",
+    "fileName" : "input.txt"
+  },
+  "output" : {
+    "type" : "STANDARD",
+    "fileName" : "output.txt"
+  },
+  "tests" : [ {
+    "input" : "1",
+    "output" : "",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "2",
+    "output" : "",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "3",
+    "output" : "",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "4",
+    "output" : "",
+    "index" : 3,
+    "active" : true
+  }, {
+    "input" : "5",
+    "output" : "",
+    "index" : 4,
+    "active" : true
+  }, {
+    "input" : "6",
+    "output" : "",
+    "index" : 5,
+    "active" : true
+  }, {
+    "input" : "7",
+    "output" : "",
+    "index" : 6,
+    "active" : true
+  }, {
+    "input" : "8",
+    "output" : "",
+    "index" : 7,
+    "active" : true
+  }, {
+    "input" : "9",
+    "output" : "",
+    "index" : 8,
+    "active" : true
+  }, {
+    "input" : "10",
+    "output" : "",
+    "index" : 9,
+    "active" : true
+  }, {
+    "input" : "11",
+    "output" : "",
+    "index" : 10,
+    "active" : true
+  }, {
+    "input" : "12",
+    "output" : "",
+    "index" : 11,
+    "active" : true
+  }, {
+    "input" : "13",
+    "output" : "",
+    "index" : 12,
+    "active" : true
+  }, {
+    "input" : "14",
+    "output" : "",
+    "index" : 13,
+    "active" : true
+  }, {
+    "input" : "15",
+    "output" : "",
+    "index" : 14,
+    "active" : true
+  }, {
+    "input" : "16",
+    "output" : "",
+    "index" : 15,
+    "active" : true
+  } ],
+  "location" : "src/main",
+  "vmArgs" : "-Xmx256m -Xss64m",
+  "mainClass" : "Main",
+  "taskClass" : "main.N",
+  "checkerClass" : "main.NChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.11.12",
+  "contestName" : "Лабораторная работа по сортировкам и поиску, 2020 год",
+  "truncate" : true,
+  "inputClass" : "main.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}

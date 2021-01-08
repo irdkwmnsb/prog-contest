@@ -1,0 +1,49 @@
+{
+  "name" : "choose2num",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "TASK_ID",
+    "fileName" : "input.txt"
+  },
+  "output" : {
+    "type" : "TASK_ID",
+    "fileName" : "output.txt"
+  },
+  "tests" : [ {
+    "input" : "4 2\n2 3",
+    "output" : "3",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "4 2\n1 2",
+    "output" : "0",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "4 2\n1 3",
+    "output" : "1",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "4 2\n1 4",
+    "output" : "2",
+    "index" : 3,
+    "active" : true
+  } ],
+  "location" : "src/main",
+  "vmArgs" : "-Xmx256m -Xss64m",
+  "mainClass" : "Main",
+  "taskClass" : "main.choose2num",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.12.01",
+  "contestName" : "Лабораторная работа по комбинаторике",
+  "truncate" : true,
+  "inputClass" : "main.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}

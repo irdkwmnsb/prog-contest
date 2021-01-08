@@ -1,0 +1,34 @@
+{
+  "name" : "chaincode",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "TASK_ID",
+    "fileName" : "input.txt"
+  },
+  "output" : {
+    "type" : "TASK_ID",
+    "fileName" : "output.txt"
+  },
+  "tests" : [ {
+    "input" : "3",
+    "output" : "000\n001\n010\n101\n011\n111\n110\n100",
+    "index" : 0,
+    "active" : true
+  } ],
+  "location" : "src/main",
+  "vmArgs" : "-Xmx256m -Xss64m",
+  "mainClass" : "Main",
+  "taskClass" : "main.chaincode",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.11.30",
+  "contestName" : "Лабораторная работа по комбинаторике",
+  "truncate" : true,
+  "inputClass" : "main.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}

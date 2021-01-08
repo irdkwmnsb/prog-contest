@@ -1,0 +1,439 @@
+{
+  "name" : "D",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD",
+    "fileName" : "input.txt"
+  },
+  "output" : {
+    "type" : "STANDARD",
+    "fileName" : "output.txt"
+  },
+  "tests" : [ {
+    "input" : "3 3\r\n",
+    "output" : "33\r\n",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "6 2\r\n",
+    "output" : "114\r\n",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "42 7\r\n",
+    "output" : "83419789\r\n",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "1 1\r\n",
+    "output" : "1\r\n",
+    "index" : 3,
+    "active" : true
+  }, {
+    "input" : "1 2\r\n",
+    "output" : "2\r\n",
+    "index" : 4,
+    "active" : true
+  }, {
+    "input" : "1 26\r\n",
+    "output" : "26\r\n",
+    "index" : 5,
+    "active" : true
+  }, {
+    "input" : "2 1\r\n",
+    "output" : "2\r\n",
+    "index" : 6,
+    "active" : true
+  }, {
+    "input" : "2 2\r\n",
+    "output" : "6\r\n",
+    "index" : 7,
+    "active" : true
+  }, {
+    "input" : "2 3\r\n",
+    "output" : "12\r\n",
+    "index" : 8,
+    "active" : true
+  }, {
+    "input" : "2 26\r\n",
+    "output" : "702\r\n",
+    "index" : 9,
+    "active" : true
+  }, {
+    "input" : "5 26\r\n",
+    "output" : "126230\r\n",
+    "index" : 10,
+    "active" : true
+  }, {
+    "input" : "18 15\r\n",
+    "output" : "80514680\r\n",
+    "index" : 11,
+    "active" : true
+  }, {
+    "input" : "18 21\r\n",
+    "output" : "465781405\r\n",
+    "index" : 12,
+    "active" : true
+  }, {
+    "input" : "7 9\r\n",
+    "output" : "72783\r\n",
+    "index" : 13,
+    "active" : true
+  }, {
+    "input" : "11 19\r\n",
+    "output" : "799143743\r\n",
+    "index" : 14,
+    "active" : true
+  }, {
+    "input" : "11 7\r\n",
+    "output" : "2218727\r\n",
+    "index" : 15,
+    "active" : true
+  }, {
+    "input" : "4 13\r\n",
+    "output" : "5200\r\n",
+    "index" : 16,
+    "active" : true
+  }, {
+    "input" : "4 1\r\n",
+    "output" : "4\r\n",
+    "index" : 17,
+    "active" : true
+  }, {
+    "input" : "12 15\r\n",
+    "output" : "291713377\r\n",
+    "index" : 18,
+    "active" : true
+  }, {
+    "input" : "17 25\r\n",
+    "output" : "332362020\r\n",
+    "index" : 19,
+    "active" : true
+  }, {
+    "input" : "2 24\r\n",
+    "output" : "600\r\n",
+    "index" : 20,
+    "active" : true
+  }, {
+    "input" : "75 10\r\n",
+    "output" : "923995919\r\n",
+    "index" : 21,
+    "active" : true
+  }, {
+    "input" : "22 20\r\n",
+    "output" : "528347045\r\n",
+    "index" : 22,
+    "active" : true
+  }, {
+    "input" : "67 9\r\n",
+    "output" : "864202405\r\n",
+    "index" : 23,
+    "active" : true
+  }, {
+    "input" : "17 23\r\n",
+    "output" : "504520440\r\n",
+    "index" : 24,
+    "active" : true
+  }, {
+    "input" : "63 3\r\n",
+    "output" : "398114894\r\n",
+    "index" : 25,
+    "active" : true
+  }, {
+    "input" : "17 17\r\n",
+    "output" : "789768955\r\n",
+    "index" : 26,
+    "active" : true
+  }, {
+    "input" : "63 1\r\n",
+    "output" : "63\r\n",
+    "index" : 27,
+    "active" : true
+  }, {
+    "input" : "9 15\r\n",
+    "output" : "10605345\r\n",
+    "index" : 28,
+    "active" : true
+  }, {
+    "input" : "58 21\r\n",
+    "output" : "99544603\r\n",
+    "index" : 29,
+    "active" : true
+  }, {
+    "input" : "47 13\r\n",
+    "output" : "678116981\r\n",
+    "index" : 30,
+    "active" : true
+  }, {
+    "input" : "675 2\r\n",
+    "output" : "987360803\r\n",
+    "index" : 31,
+    "active" : true
+  }, {
+    "input" : "815 16\r\n",
+    "output" : "746760092\r\n",
+    "index" : 32,
+    "active" : true
+  }, {
+    "input" : "659 26\r\n",
+    "output" : "273079520\r\n",
+    "index" : 33,
+    "active" : true
+  }, {
+    "input" : "800 10\r\n",
+    "output" : "687684880\r\n",
+    "index" : 34,
+    "active" : true
+  }, {
+    "input" : "348 20\r\n",
+    "output" : "591059373\r\n",
+    "index" : 35,
+    "active" : true
+  }, {
+    "input" : "192 8\r\n",
+    "output" : "258826588\r\n",
+    "index" : 36,
+    "active" : true
+  }, {
+    "input" : "141 22\r\n",
+    "output" : "837253090\r\n",
+    "index" : 37,
+    "active" : true
+  }, {
+    "input" : "985 3\r\n",
+    "output" : "755372496\r\n",
+    "index" : 38,
+    "active" : true
+  }, {
+    "input" : "364 19\r\n",
+    "output" : "182061397\r\n",
+    "index" : 39,
+    "active" : true
+  }, {
+    "input" : "208 3\r\n",
+    "output" : "928219062\r\n",
+    "index" : 40,
+    "active" : true
+  }, {
+    "input" : "348 13\r\n",
+    "output" : "352492023\r\n",
+    "index" : 41,
+    "active" : true
+  }, {
+    "input" : "2297 14\r\n",
+    "output" : "730639952\r\n",
+    "index" : 42,
+    "active" : true
+  }, {
+    "input" : "1142 2\r\n",
+    "output" : "160576726\r\n",
+    "index" : 43,
+    "active" : true
+  }, {
+    "input" : "9986 12\r\n",
+    "output" : "198452993\r\n",
+    "index" : 44,
+    "active" : true
+  }, {
+    "input" : "1934 22\r\n",
+    "output" : "516887969\r\n",
+    "index" : 45,
+    "active" : true
+  }, {
+    "input" : "779 6\r\n",
+    "output" : "830147354\r\n",
+    "index" : 46,
+    "active" : true
+  }, {
+    "input" : "2327 20\r\n",
+    "output" : "224847495\r\n",
+    "index" : 47,
+    "active" : true
+  }, {
+    "input" : "8467 4\r\n",
+    "output" : "413760230\r\n",
+    "index" : 48,
+    "active" : true
+  }, {
+    "input" : "4846 17\r\n",
+    "output" : "204838240\r\n",
+    "index" : 49,
+    "active" : true
+  }, {
+    "input" : "9498 5\r\n",
+    "output" : "844174302\r\n",
+    "index" : 50,
+    "active" : true
+  }, {
+    "input" : "8343 15\r\n",
+    "output" : "804701051\r\n",
+    "index" : 51,
+    "active" : true
+  }, {
+    "input" : "4483 25\r\n",
+    "output" : "509830401\r\n",
+    "index" : 52,
+    "active" : true
+  }, {
+    "input" : "3327 13\r\n",
+    "output" : "368408007\r\n",
+    "index" : 53,
+    "active" : true
+  }, {
+    "input" : "4876 19\r\n",
+    "output" : "142956444\r\n",
+    "index" : 54,
+    "active" : true
+  }, {
+    "input" : "51531 12\r\n",
+    "output" : "804388973\r\n",
+    "index" : 55,
+    "active" : true
+  }, {
+    "input" : "375 26\r\n",
+    "output" : "26334075\r\n",
+    "index" : 56,
+    "active" : true
+  }, {
+    "input" : "49220 10\r\n",
+    "output" : "786205492\r\n",
+    "index" : 57,
+    "active" : true
+  }, {
+    "input" : "15598 14\r\n",
+    "output" : "308753867\r\n",
+    "index" : 58,
+    "active" : true
+  }, {
+    "input" : "40250 2\r\n",
+    "output" : "48130581\r\n",
+    "index" : 59,
+    "active" : true
+  }, {
+    "input" : "56391 12\r\n",
+    "output" : "539440312\r\n",
+    "index" : 60,
+    "active" : true
+  }, {
+    "input" : "37939 22\r\n",
+    "output" : "697104938\r\n",
+    "index" : 61,
+    "active" : true
+  }, {
+    "input" : "54080 10\r\n",
+    "output" : "266006941\r\n",
+    "index" : 62,
+    "active" : true
+  }, {
+    "input" : "2924 20\r\n",
+    "output" : "231665575\r\n",
+    "index" : 63,
+    "active" : true
+  }, {
+    "input" : "51768 4\r\n",
+    "output" : "278760938\r\n",
+    "index" : 64,
+    "active" : true
+  }, {
+    "input" : "43717 14\r\n",
+    "output" : "391130156\r\n",
+    "index" : 65,
+    "active" : true
+  }, {
+    "input" : "25265 2\r\n",
+    "output" : "219959123\r\n",
+    "index" : 66,
+    "active" : true
+  }, {
+    "input" : "41405 12\r\n",
+    "output" : "998178733\r\n",
+    "index" : 67,
+    "active" : true
+  }, {
+    "input" : "7784 25\r\n",
+    "output" : "520444414\r\n",
+    "index" : 68,
+    "active" : true
+  }, {
+    "input" : "56628 9\r\n",
+    "output" : "430054597\r\n",
+    "index" : 69,
+    "active" : true
+  }, {
+    "input" : "81281 19\r\n",
+    "output" : "138445787\r\n",
+    "index" : 70,
+    "active" : true
+  }, {
+    "input" : "100000 1\r\n",
+    "output" : "100000\r\n",
+    "index" : 71,
+    "active" : true
+  }, {
+    "input" : "100000 2\r\n",
+    "output" : "204827584\r\n",
+    "index" : 72,
+    "active" : true
+  }, {
+    "input" : "100000 3\r\n",
+    "output" : "177538027\r\n",
+    "index" : 73,
+    "active" : true
+  }, {
+    "input" : "100000 7\r\n",
+    "output" : "313442075\r\n",
+    "index" : 74,
+    "active" : true
+  }, {
+    "input" : "100000 25\r\n",
+    "output" : "302684525\r\n",
+    "index" : 75,
+    "active" : true
+  }, {
+    "input" : "100000 26\r\n",
+    "output" : "465957128\r\n",
+    "index" : 76,
+    "active" : true
+  }, {
+    "input" : "99999 1\r\n",
+    "output" : "99999\r\n",
+    "index" : 77,
+    "active" : true
+  }, {
+    "input" : "99999 2\r\n",
+    "output" : "301522448\r\n",
+    "index" : 78,
+    "active" : true
+  }, {
+    "input" : "99999 5\r\n",
+    "output" : "705727695\r\n",
+    "index" : 79,
+    "active" : true
+  }, {
+    "input" : "99999 26\r\n",
+    "output" : "623361119\r\n",
+    "index" : 80,
+    "active" : true
+  }, {
+    "input" : "99761 13\r\n",
+    "output" : "489228680\r\n",
+    "index" : 81,
+    "active" : true
+  } ],
+  "location" : "src/main",
+  "vmArgs" : "-Xmx256m -Xss64m",
+  "mainClass" : "Main",
+  "taskClass" : "main.D",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.11.04",
+  "contestName" : "ICPC 2019-2020 North-Western Russia Regional Contest",
+  "truncate" : true,
+  "inputClass" : "main.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}

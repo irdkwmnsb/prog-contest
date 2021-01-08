@@ -1,0 +1,44 @@
+{
+  "name" : "G",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD",
+    "fileName" : "input.txt"
+  },
+  "output" : {
+    "type" : "STANDARD",
+    "fileName" : "output.txt"
+  },
+  "tests" : [ {
+    "input" : "3\nabacaba",
+    "output" : "3\n4 2 1 \n0110100101",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "2\nbbb",
+    "output" : "2\n0 3\n0",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "20\nkotlomomkololslona",
+    "output" : "20\n1 0 0 0 0 0 0 0 0 0 2 4 2 1 6 0 0 0 1 1 \n001001110010011010000001010110010010110011101001",
+    "index" : 2,
+    "active" : true
+  } ],
+  "location" : "src/main",
+  "vmArgs" : "-Xmx256m -Xss64m",
+  "mainClass" : "Main",
+  "taskClass" : "main.G",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2021.01.06",
+  "contestName" : "лабораторная работа по кодированию",
+  "truncate" : true,
+  "inputClass" : "main.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}

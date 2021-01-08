@@ -1,0 +1,54 @@
+{
+  "name" : "E",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD",
+    "fileName" : "input.txt"
+  },
+  "output" : {
+    "type" : "STANDARD",
+    "fileName" : "output.txt"
+  },
+  "tests" : [ {
+    "input" : "3 3 1\nbbb\naba\nbaa",
+    "output" : "aba\nbaa\nbbb",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "3 3 2\nbbb\naba\nbaa",
+    "output" : "baa\naba\nbbb",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "3 3 3\nbbb\naba\nbaa",
+    "output" : "aba\nbaa\nbbb",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "3 3 3\nzyx\neug\nejv",
+    "output" : "ejv\neug\nzyx",
+    "index" : 3,
+    "active" : true
+  }, {
+    "input" : "3 3 3\nzyx\nzzz\nzaz",
+    "output" : "zaz\nzyx\nzzz",
+    "index" : 4,
+    "active" : true
+  } ],
+  "location" : "src/main",
+  "vmArgs" : "-Xmx256m -Xss64m",
+  "mainClass" : "Main",
+  "taskClass" : "main.E",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.11.11",
+  "contestName" : "Лабораторная работа по сортировкам и поиску, 2020 год",
+  "truncate" : true,
+  "inputClass" : "main.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}

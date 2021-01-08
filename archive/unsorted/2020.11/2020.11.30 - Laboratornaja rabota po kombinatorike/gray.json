@@ -1,0 +1,34 @@
+{
+  "name" : "gray",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "TASK_ID",
+    "fileName" : "allvectors.in"
+  },
+  "output" : {
+    "type" : "TASK_ID",
+    "fileName" : "allvectors.out"
+  },
+  "tests" : [ {
+    "input" : "3",
+    "output" : "000\n001\n011\n010\n110\n111\n101\n100",
+    "index" : 0,
+    "active" : true
+  } ],
+  "location" : "src/main",
+  "vmArgs" : "-Xmx256m -Xss64m",
+  "mainClass" : "Main",
+  "taskClass" : "main.gray",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.11.30",
+  "contestName" : "Лабораторная работа по комбинаторике",
+  "truncate" : true,
+  "inputClass" : "main.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}

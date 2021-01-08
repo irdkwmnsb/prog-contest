@@ -1,0 +1,39 @@
+{
+  "name" : "C",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD",
+    "fileName" : "input.txt"
+  },
+  "output" : {
+    "type" : "STANDARD",
+    "fileName" : "output.txt"
+  },
+  "tests" : [ {
+    "input" : "push 3\npush 4\npush 2\nextract-min\ndecrease-key 2 1\nextract-min\nextract-min\nextract-min",
+    "output" : "2 3\n1 2\n3 1\n*",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "push 5\npush 4\npush 3\npush 2\npush 1\nextract-min\nextract-min\nextract-min\nextract-min\nextract-min",
+    "output" : "1 5\n2 4\n3 3\n4 2\n5 1",
+    "index" : 1,
+    "active" : true
+  } ],
+  "location" : "src/main",
+  "vmArgs" : "-Xmx256m -Xss64m",
+  "mainClass" : "Main",
+  "taskClass" : "main.C",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2020.11.25",
+  "contestName" : "Лабораторная работа по приоритетным очередям и СНМ",
+  "truncate" : true,
+  "inputClass" : "main.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}

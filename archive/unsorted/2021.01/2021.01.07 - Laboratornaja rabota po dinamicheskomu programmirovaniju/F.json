@@ -1,0 +1,154 @@
+{
+  "name" : "F",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD",
+    "fileName" : "input.txt"
+  },
+  "output" : {
+    "type" : "STANDARD",
+    "fileName" : "output.txt"
+  },
+  "tests" : [ {
+    "input" : "k?t*n\nkitten",
+    "output" : "YES",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "k?t?n\nkitten",
+    "output" : "NO",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "*\naslkjhsalkdjhaslkdjhdlkh",
+    "output" : "YES",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "\nasd",
+    "output" : "NO",
+    "index" : 3,
+    "active" : true
+  }, {
+    "input" : "*e*\nksjdbjdndchj",
+    "output" : "NO",
+    "index" : 4,
+    "active" : true
+  }, {
+    "input" : "*e*\nksjedbjdndchj",
+    "output" : "YES",
+    "index" : 5,
+    "active" : true
+  }, {
+    "input" : "******\nd",
+    "output" : "YES",
+    "index" : 6,
+    "active" : true
+  }, {
+    "input" : "?\nd",
+    "output" : "YES",
+    "index" : 7,
+    "active" : true
+  }, {
+    "input" : "??\nd",
+    "output" : "NO",
+    "index" : 8,
+    "active" : true
+  }, {
+    "input" : "?\ndd",
+    "output" : "NO",
+    "index" : 9,
+    "active" : true
+  }, {
+    "input" : "a\n\n",
+    "output" : "NO",
+    "index" : 10,
+    "active" : true
+  }, {
+    "input" : "\n\n",
+    "output" : "YES",
+    "index" : 11,
+    "active" : true
+  }, {
+    "input" : "*\n\n",
+    "output" : "YES",
+    "index" : 12,
+    "active" : true
+  }, {
+    "input" : "*b*b\nbccaab",
+    "output" : "YES",
+    "index" : 13,
+    "active" : true
+  }, {
+    "input" : "b*b\nbb",
+    "output" : "YES",
+    "index" : 14,
+    "active" : true
+  }, {
+    "input" : "*bb\nbb",
+    "output" : "YES",
+    "index" : 15,
+    "active" : true
+  }, {
+    "input" : "*?\nb",
+    "output" : "YES",
+    "index" : 16,
+    "active" : true
+  }, {
+    "input" : "*\n\n",
+    "output" : "YES",
+    "index" : 17,
+    "active" : true
+  }, {
+    "input" : "**\n\n",
+    "output" : "YES",
+    "index" : 18,
+    "active" : true
+  }, {
+    "input" : "?*\n?",
+    "output" : "YES",
+    "index" : 19,
+    "active" : true
+  }, {
+    "input" : "*?\n?",
+    "output" : "YES",
+    "index" : 20,
+    "active" : true
+  }, {
+    "input" : "**c*\ncaabaa",
+    "output" : "YES",
+    "index" : 21,
+    "active" : true
+  }, {
+    "input" : "?*???\nasd",
+    "output" : "NO",
+    "index" : 22,
+    "active" : true
+  }, {
+    "input" : "???\nasd",
+    "output" : "YES",
+    "index" : 23,
+    "active" : true
+  }, {
+    "input" : "???\na",
+    "output" : "NO",
+    "index" : 24,
+    "active" : true
+  } ],
+  "location" : "src/main",
+  "vmArgs" : "-Xmx256m -Xss64m",
+  "mainClass" : "Main",
+  "taskClass" : "main.F",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2021.01.07",
+  "contestName" : "Лабораторная работа по динамическому программированию",
+  "truncate" : true,
+  "inputClass" : "main.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}
