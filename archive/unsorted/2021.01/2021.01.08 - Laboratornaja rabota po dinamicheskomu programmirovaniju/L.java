@@ -70,10 +70,7 @@ public class L {
     public void solve(int testNumber, Scanner in, PrintWriter out) {
         this.out = out;
         int n = in.nextInt();
-        g = Stream.generate(ArrayList<Edge>::new).limit(n).toArray((IntFunction<List<Edge>[]>) List[]::new);
-        for (int i = 0; i < n; i++) {
-            g[i] = new ArrayList<>();
-        }
+        g = Stream.generate(ArrayList<Edge>::new).limit(n).toArray((IntFunction<List<Edge>[]>) List[]::new); }
         for (int i = 0; i < n - 1; i++) {
             int from = in.nextInt() - 1, to = in.nextInt() - 1;
             long w = in.nextLong();

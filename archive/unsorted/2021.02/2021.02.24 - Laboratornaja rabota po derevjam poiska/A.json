@@ -1,0 +1,39 @@
+{
+  "name" : "A",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD",
+    "fileName" : "input.txt"
+  },
+  "output" : {
+    "type" : "STANDARD",
+    "fileName" : "output.txt"
+  },
+  "tests" : [ {
+    "input" : "insert 2\ninsert 5\ninsert 3\nexists 2\nexists 4\nnext 4\nprev 4\ndelete 5\nnext 4\nprev 4\n",
+    "output" : "true\nfalse\n5\n3\nnone\n3\n",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "insert 2\ninsert 5\ninsert 5\ninsert 3\nexists 2\nexists 4\nnext 4\nprev 4\ndelete 5\nnext 4\nprev 4\n",
+    "output" : "true\nfalse\n5\n3\nnone\n3\n",
+    "index" : 1,
+    "active" : true
+  } ],
+  "location" : "src/main",
+  "vmArgs" : "-Xmx256m -Xss64m",
+  "mainClass" : "Main",
+  "taskClass" : "main.A",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2021.02.24",
+  "contestName" : "Лабораторная работа по деревьям поиска",
+  "truncate" : true,
+  "inputClass" : "main.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}

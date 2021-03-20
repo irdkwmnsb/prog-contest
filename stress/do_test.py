@@ -32,9 +32,9 @@ def make_random_string(length, charsource):
 
 def test(i: int):
     seed(i)
-    word_letters = "abc"
-    pattern_letters = "abc??**"
-    return make_random_string(4, pattern_letters) + "\n" + make_random_string(10, word_letters)
+    n, m = 5, 5
+    a = [randint(1, m) for _ in range(n)]
+    return f"{n} {m} \n{' '.join(map(str, a))}"
     # return get_output("cmake-build-debug/test_gen.exe").strip().decode()
 
 
@@ -55,9 +55,9 @@ if __name__ == "__main__":
         print("test %d: " % i, end='')
         # print(tt)
         # answerok = get_output("python correct.py", tt).strip().decode()
-        answerok = solve(tt)
-        # answer = get_output("java output/Main.java", tt.encode(), tl=10).strip().decode()
-        answer = get_output(r"C:\Users\me\Downloads\Telegram Desktop\e.exe", tt.encode()).strip().decode()
+        # answerok = solve(tt)
+        answerok = get_output("java output/Main.java", tt.encode(), tl=10).strip().decode()
+        answer = get_output(r"C:\Users\me\Downloads\Telegram Desktop\a.exe", tt.encode()).strip().decode()
         print()
         print(tt)
         print(answer)

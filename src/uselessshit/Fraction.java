@@ -1,4 +1,4 @@
-package main;
+package uselessshit;
 
 /**********************************************************
  Fraction.java - a Java representation of a fraction

@@ -256,4 +256,12 @@ public class Utils {
         c[a] = c[b];
         c[b] = temp;
     }
+
+    public static boolean inRange(int from, int to, int val) {
+        return from <= val && val <= to;
+    }
+
+    public static int cap(int min, int max, int val) {
+        return Math.max(min, Math.min(max, val));
+    }
 }

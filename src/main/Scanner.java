@@ -169,7 +169,7 @@ public class Scanner {
 
     static boolean isWord(char c) {
         return (c != '\r' && c != '\n' && c != ' ' &&
-                !Character.isWhitespace(c) && Character.getType(c) != Character.DASH_PUNCTUATION);
+                !Character.isWhitespace(c));
     }
 
     public String nextWord() {
