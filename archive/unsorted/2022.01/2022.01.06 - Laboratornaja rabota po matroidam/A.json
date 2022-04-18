@@ -1,0 +1,44 @@
+{
+  "name" : "A",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "CUSTOM",
+    "fileName" : "schedule.in"
+  },
+  "output" : {
+    "type" : "CUSTOM",
+    "fileName" : "schedule.out"
+  },
+  "tests" : [ {
+    "input" : "2\n1 1\n1 2",
+    "output" : "1",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "3\n1 1\n2 2\n3 3",
+    "output" : "0",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "2\n1000101010 1\n1000101010 2",
+    "output" : "0",
+    "index" : 2,
+    "active" : true
+  } ],
+  "location" : "src/main",
+  "vmArgs" : "-Xmx256m -Xss64m",
+  "mainClass" : "Main",
+  "taskClass" : "main.A",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2022.01.06",
+  "contestName" : "Лабораторная работа по матроидам.",
+  "truncate" : true,
+  "inputClass" : "main.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}

@@ -3,6 +3,7 @@ from sys import stderr, stdin, stdout, argv
 from subprocess import Popen, PIPE, STDOUT, TimeoutExpired
 from random import *
 from string import ascii_lowercase
+import string
 
 
 def get_output(args, test: bytes = None, tl: int = 1):
@@ -30,19 +31,56 @@ def make_random_string(length, charsource):
     return "".join(choice(charsource) for i in range(length))
 
 
-def test(i: int):
-    seed(i)
-    n, m = 5, 5
-    a = [randint(1, m) for _ in range(n)]
-    return f"{n} {m} \n{' '.join(map(str, a))}"
-    # return get_output("cmake-build-debug/test_gen.exe").strip().decode()
+def test(number):
+    seed(number)
+    kn = 3
+    vn = 10
+    keys = ["".join(sample(string.ascii_lowercase, k=randint(2, 5))) for _ in range(kn)]
+    vals = ["".join(sample(string.ascii_lowercase, k=randint(2, 5))) for _ in range(vn)]
+    i = set()
+
+    def put():
+        k = choice(keys)
+        i.add(k)
+        return "put " + k + " " + choice(vals)
+
+    def delete():
+        if i:
+            k = sample(i, 1)[0]
+            i.remove(k)
+            return "delete " + k
+        else:
+            return "delete isempty"
+
+    def get():
+        if i:
+            return "get " + sample(i, 1)[0]
+        else:
+            return "get isempty"
+
+    ops = [
+        put, delete, get
+    ]
+    opscound = 5000
+    ans = [choice(ops)() for _ in range(opscound)]
+    return "\r\n".join(ans) + "\r\n"
 
 
 def solve(test: str):
-    import re
-    pattern, word = test.split()
-    p = re.compile(pattern.replace(".", r"\.").replace("*", r".*").replace("?", "."))
-    return "YNEOS"[not bool(p.fullmatch(word))::2]
+    ops = test.split("\n")
+    ans = []
+    map = {}
+    for op in ops:
+        if op:
+            name, *args = op.split()
+            if name == "put":
+                map[args[0]] = args[1]
+            if name == "delete":
+                if args[0] in map:
+                    del map[args[0]]
+            if name == "get":
+                ans.append(map.get(args[0], "none"))
+    return "\n".join(ans) + "\n"
 
 
 def check(correct: str, testing: str):
@@ -53,23 +91,21 @@ if __name__ == "__main__":
     for i in count(int(argv[1] or "1")):
         tt = test(i)
         print("test %d: " % i, end='')
-        # print(tt)
         # answerok = get_output("python correct.py", tt).strip().decode()
-        # answerok = solve(tt)
-        answerok = get_output("java output/Main.java", tt.encode(), tl=10).strip().decode()
-        answer = get_output(r"C:\Users\me\Downloads\Telegram Desktop\a.exe", tt.encode()).strip().decode()
-        print()
-        print(tt)
-        print(answer)
-        print(answerok)
+        answerok = solve(tt).strip()
+        answer = get_output(r"java -cp output Main",
+                            tt.encode(), tl=10).decode().strip().replace("\r\n","\n")
+        # answer = get_output(r"C:\Users\me\Downloads\Telegram Desktop\a.exe", tt.encode()).strip().decode()
         if answer != answerok:
             print("WA")
             print("Test was:")
             print(tt)
             print("Expected:")
             print(answerok)
+            print(repr(answerok))
             print("Got:")
             print(answer)
+            print(repr(answer))
             exit(0)
         else:
             print("OK")

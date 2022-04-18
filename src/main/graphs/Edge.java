@@ -1,6 +1,8 @@
 package main.graphs;
 
-public class Edge {
+import java.util.Objects;
+
+public class Edge implements Cloneable {
     protected final int from;
     protected final int to;
 
@@ -23,5 +25,9 @@ public class Edge {
 
     public int getTo() {
         return to;
+    }
+
+    public Edge reverse() {
+        return new Edge(to, from);
     }
 }

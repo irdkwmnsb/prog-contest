@@ -2,7 +2,7 @@ package main;
 
 public class Sorts {
     @FunctionalInterface
-    interface IntComparator {
+    public interface IntComparator {
         int compare(int a, int b);
     }
 

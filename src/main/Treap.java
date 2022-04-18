@@ -256,4 +256,19 @@ public class Treap<T extends Comparable<T>> {
         }
         return null;
     }
+
+    public List<T> toList() {
+        List<T> ans = new ArrayList<>();
+        if (root != null)
+            iterate(root, ans);
+        return ans;
+    }
+
+    void iterate(Node<T> n, List<T> l) {
+        if (n.l != null)
+            iterate(n.l, l);
+        l.add(n.v);
+        if (n.r != null)
+            iterate(n.r, l);
+    }
 }

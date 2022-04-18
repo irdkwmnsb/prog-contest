@@ -10,9 +10,14 @@
     "fileName" : "output.txt"
   },
   "tests" : [ {
-    "input" : "insert 2\ninsert 5\ninsert 3\nexists 2\nexists 4\ninsert 2\ndelete 2\nexists 2",
-    "output" : "true\nfalse\nfalse",
+    "input" : "3 2\n0 1 2 3\n1 2 3",
+    "output" : "3\n1 3 5 3\n5\n0 1 4 10 12 9\n0 1 0 ... 0",
     "index" : 0,
+    "active" : true
+  }, {
+    "input" : "1 3\n1 2\n1 4 5 2",
+    "output" : "3\n2 6 5 2\n4\n1 6 13 12 4\n1 998244351 3 ... 999 998243353",
+    "index" : 1,
     "active" : true
   } ],
   "location" : "src/main",
@@ -22,8 +27,8 @@
   "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
   "checkerParameters" : "",
   "testClasses" : [ ],
-  "date" : "2021.03.20",
-  "contestName" : "Лабораторная работа по хеш-таблицам",
+  "date" : "2022.04.18",
+  "contestName" : "Производящие функции",
   "truncate" : true,
   "inputClass" : "main.Scanner",
   "outputClass" : "java.io.PrintWriter",

@@ -1,0 +1,44 @@
+{
+  "name" : "02C. Планирование вечеринки",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD",
+    "fileName" : "input.txt"
+  },
+  "output" : {
+    "type" : "STANDARD",
+    "fileName" : "output.txt"
+  },
+  "tests" : [ {
+    "input" : "3 3\nvova\nmasha\ngosha\n-vova => -masha\n-masha => +gosha\n+gosha => +vova\n",
+    "output" : "2\nvova\ngosha\n",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "1 1\nvova\n-vova => +vova\n",
+    "output" : "1\nvova\n",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "2 4\nvova\nmasha\n+vova => +masha\n+masha => -vova\n-vova => -masha\n-masha => +vova\n",
+    "output" : "-1\n",
+    "index" : 2,
+    "active" : true
+  } ],
+  "location" : "src/main",
+  "vmArgs" : "-Xmx512M",
+  "mainClass" : "Main",
+  "taskClass" : "main.CPlanirovanieVecherinki",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2021.12.21",
+  "contestName" : "Codeforces - ИТМО, Лабораторная по алгоритмам, Графы, y2020 3 семестр (Осень 2021)",
+  "truncate" : true,
+  "inputClass" : "main.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}

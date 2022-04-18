@@ -1,0 +1,39 @@
+{
+  "name" : "01B. Кратчайший путь",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD",
+    "fileName" : "input.txt"
+  },
+  "output" : {
+    "type" : "STANDARD",
+    "fileName" : "output.txt"
+  },
+  "tests" : [ {
+    "input" : "2 1 1 2\n1 2 -10\n",
+    "output" : "-10\n",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "2 1 2 1\n1 2 -10\n",
+    "output" : "Unreachable\n",
+    "index" : 1,
+    "active" : true
+  } ],
+  "location" : "src/main",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "main.BKratchaishiiPut",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2021.12.21",
+  "contestName" : "Codeforces - ИТМО, Лабораторная по алгоритмам, Графы, y2020 3 семестр (Осень 2021)",
+  "truncate" : true,
+  "inputClass" : "main.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}

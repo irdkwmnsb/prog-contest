@@ -2,10 +2,7 @@ package main;
 
 import net.egork.chelper.tester.Interactor;
 
-import java.util.InputMismatchException;
-import java.util.OptionalDouble;
-import java.util.OptionalInt;
-import java.util.OptionalLong;
+import java.util.*;
 
 public class Utils {
     static long[] FACTORIALS = new long[]{1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 479001600, 6227020800L, 87178291200L, 1307674368000L, 20922789888000L, 355687428096000L, 6402373705728000L, 121645100408832000L, 2432902008176640000L};
@@ -59,6 +56,10 @@ public class Utils {
         return res;
     }
 
+    static int binpow(int a, int b) {
+        return binpow(a, b, Integer.MAX_VALUE);
+    }
+
     static IntList divs(int n) {
         IntList ans = new IntList();
         IntList ans2 = new IntList();
@@ -96,6 +97,24 @@ public class Utils {
     public static void reverse(int[] a, int from, int to) {
         while (from < to) {
             swap(from++, to--, a);
+        }
+    }
+
+    public static <T> void reverse(T[] a, int from, int to) {
+        while (from < to) {
+            swap(a, from++, to--);
+        }
+    }
+
+    public static <T> void reverseList(List<T> l, int from, int to) {
+        while(from < to) {
+            swap(l, from++, to--);
+        }
+    }
+
+    public static <T> void reverse(IntList l, int from, int to) {
+        while(from < to) {
+            swap(l, from++, to--);
         }
     }
 
@@ -225,10 +244,22 @@ public class Utils {
         return longBound(left, right, checker, false);
     }
 
-    public static void swap(Object[] arr, int x, int y) {
-        Object a = arr[x];
+    public static <T> void swap(T[] arr, int x, int y) {
+        T a = arr[x];
         arr[x] = arr[y];
         arr[y] = a;
+    }
+
+    public static <T> void swap(List<T> arr, int x, int y) {
+        T a = arr.get(x);
+        arr.set(x, arr.get(y));
+        arr.set(y, a);
+    }
+
+    public static void swap(IntList arr, int x, int y) {
+        int a = arr.get(x);
+        arr.set(x, arr.get(y));
+        arr.set(y, a);
     }
 
     @FunctionalInterface
@@ -263,5 +294,21 @@ public class Utils {
 
     public static int cap(int min, int max, int val) {
         return Math.max(min, Math.min(max, val));
+    }
+
+    public static boolean[][] makeBoolMatrix(int n, int m) {
+        boolean[][] ret = new boolean[n][];
+        for(int i = 0; i<n; i++) {
+            ret[i] = new boolean[m];
+        }
+        return ret;
+    }
+
+    public static int[][] makeIntMatrix(int n, int m) {
+        int[][] ret = new int[n][];
+        for(int i = 0; i<n; i++) {
+            ret[i] = new int[m];
+        }
+        return ret;
     }
 }

@@ -1,0 +1,39 @@
+{
+  "name" : "06A. Pink Floyd",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD",
+    "fileName" : "input.txt"
+  },
+  "output" : {
+    "type" : "STANDARD",
+    "fileName" : "output.txt"
+  },
+  "tests" : [ {
+    "input" : "4 8 5\n1 2 -2\n2 3 3\n3 4 -5\n4 1 3\n1 3 2\n3 1 -2\n3 2 -3\n2 4 -10\n1 3 1 2 4\n",
+    "output" : "6\n5 6 5 7 2 3\n",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "4 8 5\n1 2 -2\n2 3 3\n3 4 -5\n4 1 3\n1 3 2\n3 1 -2\n3 2 -3\n2 4 10\n1 3 1 2 4\n",
+    "output" : "infinitely kind\n",
+    "index" : 1,
+    "active" : true
+  } ],
+  "location" : "src/main",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "main.APinkFloyd",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2021.12.21",
+  "contestName" : "Codeforces - ИТМО, Лабораторная по алгоритмам, Графы, y2020 3 семестр (Осень 2021)",
+  "truncate" : true,
+  "inputClass" : "main.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}

@@ -10,4 +10,8 @@ public interface Graph<E extends Edge> {
     int getN();
 
     int getM();
+
+    boolean getOriented();
+
+    E getEdge(int v, int u);
 }

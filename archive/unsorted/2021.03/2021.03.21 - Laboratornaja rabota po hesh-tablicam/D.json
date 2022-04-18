@@ -1,0 +1,38 @@
+{
+  "name" : "D",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD",
+    "fileName" : "input.txt"
+  },
+  "output" : {
+    "type" : "STANDARD",
+    "fileName" : "output.txt"
+  },
+  "tests" : [ {
+    "input" : "put a a\nput a b\nput a c\nget a\ndelete a b\nget a\ndeleteall a\nget a",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "put a a\ndelete a a\nget a",
+    "output" : "0",
+    "index" : 1,
+    "active" : true
+  } ],
+  "location" : "src/main",
+  "vmArgs" : "-Xmx256m -Xss64m",
+  "mainClass" : "Main",
+  "taskClass" : "main.D",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2021.03.21",
+  "contestName" : "Лабораторная работа по хеш-таблицам",
+  "truncate" : true,
+  "inputClass" : "main.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}

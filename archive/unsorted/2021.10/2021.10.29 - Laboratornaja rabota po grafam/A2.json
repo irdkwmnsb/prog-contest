@@ -1,0 +1,53 @@
+{
+  "name" : "A2",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD",
+    "fileName" : "input.txt"
+  },
+  "output" : {
+    "type" : "STANDARD",
+    "fileName" : "output.txt"
+  },
+  "tests" : [ {
+    "input" : "4\n\n1\n11\n101",
+    "output" : "1 2 3 4",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "3\n\n1\n11",
+    "output" : "1 2 3",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "4\n\n1\n11\n111",
+    "output" : "1 2 3 4",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "5\n\n1\n10\n100\n1000",
+    "output" : "5 4 3 2 1",
+    "index" : 3,
+    "active" : false
+  }, {
+    "input" : "6\n\n1\n01\n101\n0111\n10110",
+    "index" : 4,
+    "active" : true
+  } ],
+  "location" : "src/main",
+  "vmArgs" : "-Xmx256m -Xss64m",
+  "mainClass" : "Main",
+  "taskClass" : "main.A2",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2021.10.29",
+  "contestName" : "Лабораторная работа по графам",
+  "truncate" : true,
+  "inputClass" : "main.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}

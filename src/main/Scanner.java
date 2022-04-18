@@ -2,7 +2,6 @@ package main;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.util.stream.IntStream;
 
 public class Scanner {
     @FunctionalInterface
@@ -180,15 +179,20 @@ public class Scanner {
         return hasNext(Scanner::isWord);
     }
 
-    public boolean isLine(char c) {
+    public boolean isLineBreak(char c) {
         return c != '\n' && c != '\r';
     }
 
     public boolean hasNextLine() {
-        return hasNext(this::isLine);
+        return hasNext(this::isLineBreak);
     }
 
     public String nextLine() {
-        return next(this::isLine);
+        return next(this::isLineBreak);
+    }
+
+    public void skipLine() {
+        nextWord();
+        hasNextWord();
     }
 }

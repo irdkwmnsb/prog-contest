@@ -1,2 +1,2 @@
-15 src/main/L.json
+50 src/main/1B. Bystryj poisk podstroki v stroke.json
 0

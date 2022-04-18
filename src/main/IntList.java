@@ -1,13 +1,11 @@
 package main;
 
 import java.util.Arrays;
-import java.util.EmptyStackException;
-import java.util.PrimitiveIterator;
+import java.util.Random;
 
 public class IntList {
-    private int[] container = new int[1];
-    private int i = 0;
-    private boolean iteratorSafe = true;
+    protected int[] container = new int[1];
+    protected int i = 0;
 
     public IntList() {
 
@@ -16,7 +14,6 @@ public class IntList {
     public IntList(IntList a) {
         container = Arrays.copyOf(a.container, a.container.length);
         i = a.i;
-        iteratorSafe = a.iteratorSafe;
     }
 
     public IntList(int[] a) {
@@ -29,7 +26,6 @@ public class IntList {
     public void push(int a) {
         container[i] = a;
         i++;
-        iteratorSafe = false;
         if (i == container.length) {
             container = Arrays.copyOf(container, container.length * 2);
         }
@@ -58,7 +54,6 @@ public class IntList {
     public void pop() {
         if (i > 0) {
             i--;
-            iteratorSafe = false;
         } else {
             throw new IndexOutOfBoundsException("Pop on empty IntList");
         }
@@ -72,31 +67,55 @@ public class IntList {
         }
     }
 
-    public class IntListIterator implements PrimitiveIterator.OfInt {
-        int i = 0;
-
-        public IntListIterator() {
-        }
-
-        @Override
-        public int nextInt() {
-            if (!iteratorSafe)
-                throw new RuntimeException("IntList changed during iteration");
-            return container[i++];
-        }
-
-        @Override
-        public boolean hasNext() {
-            return i < IntList.this.i;
-        }
-    }
-
-    public IntListIterator iterator() {
-        this.iteratorSafe = true;
-        return new IntListIterator();
+    public boolean remove(int v) {
+        return findAndRemove(v, true);
     }
 
     public int[] asArray() {
         return Arrays.copyOf(container, i);
+    }
+
+    public boolean contains(int v) {
+        return findAndRemove(v, false);
+    }
+
+    private boolean findAndRemove(int v, boolean remove) {
+        for (int ind = 0; ind < i; ind++) {
+            if (container[ind] == v) {
+                if (remove) {
+                    i--;
+                    System.arraycopy(container, ind + 1, container, ind, (i - ind));
+                }
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void add(int i, int el) {
+        push(0);
+        for (int j = this.i - 1; j > i; j--) {
+            container[j] = container[j - 1];
+        }
+        container[i] = el;
+    }
+
+    public int indexOf(int x) {
+        for (int ind = 0; ind < i; ind++) {
+            if (container[ind] == x) {
+                return ind;
+            }
+        }
+        return -1;
+    }
+
+    public void clear() {
+        i = 0;
+    }
+
+    public void shuffle(Random rnd) {
+        for (int j = 0; j < i; j++) {
+            Utils.swap(j, rnd.nextInt(j + 1), container);
+        }
     }
 }
