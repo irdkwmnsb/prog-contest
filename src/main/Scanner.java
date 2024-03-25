@@ -81,7 +81,7 @@ public class Scanner {
 
     public String next(TokenChecker type) {
         if (!hasNext(type)) {
-            return "";
+            return null;
         }
         StringBuilder sb = new StringBuilder();
         sb.append((char) lastCh);

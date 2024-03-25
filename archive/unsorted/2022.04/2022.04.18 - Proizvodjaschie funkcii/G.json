@@ -1,0 +1,109 @@
+{
+  "name" : "G",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD",
+    "fileName" : "input.txt"
+  },
+  "output" : {
+    "type" : "STANDARD",
+    "fileName" : "output.txt"
+  },
+  "tests" : [ {
+    "input" : "S(L(B))",
+    "output" : "1 1 2 3 5 7 11",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "L(P(L(L(L(P(P(P(B,L(B)),L(B)),P(B,L(B)))))),P(B,L(B))))",
+    "output" : "1 1 2 5 14 42 132",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "B",
+    "output" : "0 1 0 0 0 0 0",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "P(B,B)",
+    "output" : "0 0 1 0 0 0 0",
+    "index" : 3,
+    "active" : true
+  }, {
+    "input" : "L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(L(B))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))",
+    "output" : "1 1 66 4356 287496 18974736 1252332576",
+    "index" : 4,
+    "active" : true
+  }, {
+    "input" : "S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(S(B))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))",
+    "output" : "1 1 66 2211 98021 4026231 170237419",
+    "index" : 5,
+    "active" : true
+  }, {
+    "input" : "P(S(B),L(B))",
+    "output" : "1 2 3 4 5 6 7",
+    "index" : 6,
+    "active" : true
+  }, {
+    "input" : "S(S(S(S(S(B)))))",
+    "output" : "1 1 5 15 55 170 571",
+    "index" : 7,
+    "active" : true
+  }, {
+    "input" : "S(B)",
+    "output" : "1 1 1 1 1 1 1",
+    "index" : 8,
+    "active" : true
+  }, {
+    "input" : "S(S(B))",
+    "output" : "1 1 2 3 5 7 11",
+    "index" : 9,
+    "active" : true
+  }, {
+    "input" : "S(S(S(B)))",
+    "output" : "1 1 3 6 14 27 58",
+    "index" : 10,
+    "active" : true
+  }, {
+    "input" : "S(L(L(L(L(B)))))",
+    "output" : "1 1 5 21 95 415 1851",
+    "index" : 11,
+    "active" : true
+  }, {
+    "input" : "S(L(S(L(S(L(S(L(S(L(S(L(S(L(S(L(S(L(S(L(S(L(S(L(S(L(S(L(S(L(B))))))))))))))))))))))))))))))",
+    "output" : "1 1 30 675 16875 414680 10251259 ",
+    "index" : 12,
+    "active" : true
+  }, {
+    "input" : "P(S(L(L(L(L(B))))),P(L(L(L(L(B)))),S(L(L(B))))))",
+    "output" : "1 3 15 69 324 1496 6914 ",
+    "index" : 13,
+    "active" : true
+  }, {
+    "input" : "P(S(P(S(P(S(P(S(P(S(B),S(B))),S(P(S(B),S(B))))),S(P(S(P(S(B),S(B))),S(P(S(B),S(B))))))),S(P(S(P(S(P(S(B),S(B))),S(P(S(B),S(B))))),S(P(S(P(S(B),S(B))),S(P(S(B),S(B))))))))),S(P(S(P(S(P(S(P(S(B),S(B))),S(P(S(B),S(B))))),S(P(S(P(S(B),S(B))),S(P(S(B),S(B))))))),S(P(S(P(S(P(S(B),S(B))),S(P(S(B),S(B))))),S(P(S(P(S(B),S(B))),S(P(S(B),S(B))))))))))",
+    "output" : "1 32 1072 31296 847488 21617120 526236176 \n",
+    "index" : 14,
+    "active" : true
+  }, {
+    "input" : "P(L(S(L(P(L(S(L(P(L(S(L(P(L(S(L(P(L(S(L(B))),L(S(L(B))))))),L(S(L(P(L(S(L(B))),L(S(L(B))))))))))),L(S(L(P(L(S(L(P(L(S(L(B))),L(S(L(B))))))),L(S(L(P(L(S(L(B))),L(S(L(B))))))))))))))),L(S(L(P(L(S(L(P(L(S(L(P(L(S(L(B))),L(S(L(B))))))),L(S(L(P(L(S(L(B))),L(S(L(B))))))))))),L(S(L(P(L(S(L(P(L(S(L(B))),L(S(L(B))))))),L(S(L(P(L(S(L(B))),L(S(L(B))))))))))))))))))),L(S(L(P(L(S(L(P(L(S(L(P(L(S(L(P(L(S(L(B))),L(S(L(B))))))),L(S(L(P(L(S(L(B))),L(S(L(B))))))))))),L(S(L(P(L(S(L(P(L(S(L(B))),L(S(L(B))))))),L(S(L(P(L(S(L(B))),L(S(L(B))))))))))))))),L(S(L(P(L(S(L(P(L(S(L(P(L(S(L(B))),L(S(L(B))))))),L(S(L(P(L(S(L(B))),L(S(L(B))))))))))),L(S(L(P(L(S(L(P(L(S(L(B))),L(S(L(B))))))),L(S(L(P(L(S(L(B))),L(S(L(B))))))))))))))))))))",
+    "output" : "1 32 3056 284576 26335632 2419722496 221038683120 \n",
+    "index" : 15,
+    "active" : true
+  } ],
+  "location" : "src/main",
+  "vmArgs" : "-Xmx256m -Xss64m",
+  "mainClass" : "Main",
+  "taskClass" : "main.G",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2022.04.18",
+  "contestName" : "Производящие функции",
+  "truncate" : true,
+  "inputClass" : "main.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}

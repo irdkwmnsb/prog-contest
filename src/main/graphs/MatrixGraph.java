@@ -4,10 +4,7 @@ import main.Scanner;
 import main.Utils;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.InputMismatchException;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -27,7 +24,6 @@ public class MatrixGraph<E extends Edge> extends AbstractGraph<E> {
 
     public MatrixGraph(int n, boolean oriented) {
         this.n = n;
-        //noinspection unchecked
         this.g = Stream.generate(() -> (E) null).limit((long) n * n).toArray();
         this.oriented = oriented;
     }
@@ -40,7 +36,8 @@ public class MatrixGraph<E extends Edge> extends AbstractGraph<E> {
     @Override
     public List<E> getChildren(int v) {
         checkVertex(v);
-        return  IntStream.range(0, n).mapToObj((i) -> (E) g[getIndex(v, i)]).collect(Collectors.toList());
+        //noinspection unchecked
+        return  IntStream.range(0, n).mapToObj((i) -> (E) g[getIndex(v, i)]).filter(Objects::nonNull).collect(Collectors.toList());
     }
 
     @Override

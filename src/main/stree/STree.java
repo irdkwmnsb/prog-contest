@@ -59,7 +59,7 @@ public class STree<T> {
     }
 
     T get(int i, int L, int R, int l, int r) {
-        push(i);
+//        push(i);
         if (l > r) {
             return neutral;
         } else if (l == L && R == r) {
@@ -76,7 +76,7 @@ public class STree<T> {
     }
 
     void _set(int i, int L, int R, int w, T val) {
-        push(i);
+//        push(i);
         if (L >= R) {
             tree.get(i).value = val;
             tree.get(i).size = 1;
@@ -92,35 +92,35 @@ public class STree<T> {
 
     }
 
-    void add(int i, int j, T val) {
-        add(1, 0, n, i, j, val);
-    }
+//    void add(int i, int j, T val) {
+//        add(1, 0, n, i, j, val);
+//    }
+//
+//    void add(int i, int L, int R, int l, int r, T val) {
+//        push(i);
+//        if (R >= l && r >= L) {
+//            if (r <= R && L <= l) {
+//                tree.get(i).push_value = f.apply(val, tree.get(i).push_value);
+//                push(i);
+//            } else {
+//                int M = (L + R) / 2;
+//                add(l(i), L, M, l, r, val);
+//                add(2 * i + 1, M + 1, R, l, r, val);
+//                tree.get(i).value = f.apply(tree.get(i * 2).value, tree.get(i * 2 + 1).value);
+//            }
+//        }
+//
+//    }
 
-    void add(int i, int L, int R, int l, int r, T val) {
-        push(i);
-        if (R >= l && r >= L) {
-            if (r <= R && L <= l) {
-                tree.get(i).push_value = f.apply(val, tree.get(i).push_value);
-                push(i);
-            } else {
-                int M = (L + R) / 2;
-                add(2 * i, L, M, l, r, val);
-                add(2 * i + 1, M + 1, R, l, r, val);
-                tree.get(i).value = f.apply(tree.get(i * 2).value, tree.get(i * 2 + 1).value);
-            }
-        }
-
-    }
-
-    void push(int i) {
-        Node inode = tree.get(i);
-        if (inode.push_value != null) {
-            inode.value = f.apply(inode.value, fs.apply(inode.push_value, inode.size));
-            if (i * 2 + 1 < tree.size()) {
-                tree.get(i * 2).push_value = f.apply(tree.get(i * 2).push_value, inode.push_value);
-                tree.get(i * 2 + 1).push_value = f.apply(tree.get(i * 2 + 1).push_value, inode.push_value);
-            }
-            inode.push_value = neutral;
-        }
-    }
+//    void push(int i) {
+//        Node inode = tree.get(i);
+//        if (inode.push_value != null) {
+//            inode.value = f.apply(inode.value, fs.apply(inode.push_value, inode.size));
+//            if (i * 2 + 1 < tree.size()) {
+//                tree.get(i * 2).push_value = f.apply(tree.get(i * 2).push_value, inode.push_value);
+//                tree.get(i * 2 + 1).push_value = f.apply(tree.get(i * 2 + 1).push_value, inode.push_value);
+//            }
+//            inode.push_value = neutral;
+//        }
+//    }
 }

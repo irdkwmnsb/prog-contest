@@ -1,0 +1,49 @@
+{
+  "name" : "1C - Древний язык",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD",
+    "fileName" : "input.txt"
+  },
+  "output" : {
+    "type" : "STANDARD",
+    "fileName" : "output.txt"
+  },
+  "tests" : [ {
+    "input" : "AaAbBaAcCaAa\n",
+    "output" : "4",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "AbAb\n",
+    "output" : "1",
+    "index" : 1,
+    "active" : true
+  }, {
+    "input" : "aBaB\n",
+    "output" : "1",
+    "index" : 2,
+    "active" : true
+  }, {
+    "input" : "AaBb\n",
+    "output" : "2",
+    "index" : 3,
+    "active" : true
+  } ],
+  "location" : "src/main",
+  "vmArgs" : "-Xmx256M",
+  "mainClass" : "Main",
+  "taskClass" : "main.Task1C",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2022.06.27",
+  "contestName" : "ИТМО, Лабораторная по алгоритмам, y2022 4 семестр (Весна 2022)",
+  "truncate" : true,
+  "inputClass" : "main.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}

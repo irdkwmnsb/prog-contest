@@ -33,7 +33,7 @@ public class IntSparseTable {
         int len = r - l + 1;
         int log2n = Integer.bitCount(Integer.highestOneBit(len) - 1);
         int left = st[log2n][l];
-        int right = st[log2n][r - Utils.binpow(2, log2n) + 1];
+        int right = st[log2n][(int) (r - MathUtils.binpow(2, log2n) + 1)];
         return func.applyAsInt(left, right);
     }
 }

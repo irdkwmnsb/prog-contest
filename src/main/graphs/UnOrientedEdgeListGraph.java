@@ -1,7 +1,8 @@
 package main.graphs;
 
-import main.Polynomial;
 import main.Scanner;
+import main.producing.Polynomial;
+import main.producing.SimplePolynomial;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +24,7 @@ public class UnOrientedEdgeListGraph extends AbstractGraph<UnOrientedEdge> {
         n = g.n;
     }
 
-    UnOrientedEdgeListGraph(int n) {
+    public UnOrientedEdgeListGraph(int n) {
         this.n = n;
     }
 
@@ -91,15 +92,15 @@ public class UnOrientedEdgeListGraph extends AbstractGraph<UnOrientedEdge> {
 
     public Polynomial getCharacteristicPolynomial() {
         if (getM() == 0) {
-            int[] coeffs = new int[n + 1];
+            long[] coeffs = new long[n + 1];
             coeffs[n] = 1;
-            return new Polynomial(coeffs);
+            return new SimplePolynomial(coeffs);
         }
         Edge e = edges.get(edges.size() - 1);
         UnOrientedEdgeListGraph g = new UnOrientedEdgeListGraph(this);
         removeEdge(e);
         g.mergeEdge(e);
-        return Polynomial.subtract(getCharacteristicPolynomial(), g.getCharacteristicPolynomial());
+        return getCharacteristicPolynomial().add(g.getCharacteristicPolynomial().negate());
     }
 
     public static UnOrientedEdgeListGraph readFromEdgeList(Scanner in) {

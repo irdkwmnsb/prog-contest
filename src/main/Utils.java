@@ -43,23 +43,6 @@ public class Utils {
         return r;
     }
 
-    static int binpow(int a, int b, int m) {
-        int res = 1;
-        while (b != 0)
-            if ((b & 1) != 0) {
-                res = (res * a) % m;
-                --b;
-            } else {
-                a *= a;
-                b >>= 1;
-            }
-        return res;
-    }
-
-    static int binpow(int a, int b) {
-        return binpow(a, b, Integer.MAX_VALUE);
-    }
-
     static IntList divs(int n) {
         IntList ans = new IntList();
         IntList ans2 = new IntList();
@@ -287,6 +270,11 @@ public class Utils {
         c[a] = c[b];
         c[b] = temp;
     }
+    static void swap(int a, int b, long[] c) {
+        long temp = c[a];
+        c[a] = c[b];
+        c[b] = temp;
+    }
 
     public static boolean inRange(int from, int to, int val) {
         return from <= val && val <= to;
@@ -310,5 +298,10 @@ public class Utils {
             ret[i] = new int[m];
         }
         return ret;
+    }
+    public static int[] makeIntArray(int size, int defval) {
+        int[] arr = new int[size];
+        Arrays.fill(arr, defval);
+        return arr;
     }
 }
